@@ -21,7 +21,7 @@
     "url": "https://github.com/jsnomad/koa-restful-boilerplate/issues"
   },
   "homepage": "https://github.com/jsnomad/koa-restful-boilerplate#readme",
-  "main": "server.js",
+  "main": "server/index.js",
   "scripts": {
     "start": "nodemon server/ --exec babel-node",
     "lint": "eslint ./",
