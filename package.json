@@ -24,14 +24,17 @@
   "main": "server/index.js",
   "scripts": {
     "start": "nodemon server/ --exec babel-node",
-    "lint": "eslint ./",
-    "test": "npm run lint"
+    "build": "babel server -d dist",
+    "lint": "eslint ./server",
+    "test": "npm run lint",
+    "prod": "npm run build && node dist/"
   },
   "devDependencies": {
     "babel-eslint": "5.0.0-beta10",
     "babel-cli": "^6.5.1",
     "babel-plugin-syntax-async-functions": "^6.5.0",
     "babel-plugin-transform-async-to-generator": "^6.5.0",
+    "babel-polyfill": "^6.5.0",
     "babel-preset-es2015": "^6.3.13",
     "babel-register": "^6.3.13",
     "eslint": "^1.10.3",

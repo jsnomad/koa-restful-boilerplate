@@ -14,20 +14,22 @@ Install dependencies
 npm install
 ```
 
-Start a Mongodb instance
-```
-mongod
-```
-
-Start a local server
+Start a Local Server
 ```
 npm start
 ```
 
-Run test
+Run Test
 ```
 npm test
 ```
+
+Building and Running Production Server
+```
+npm run prod
+```
+
+**Note : Please make sure your MongoDB is running before using ```npm start``` or ```npm run prod```**
 
 ## License
 MIT &copy; [Thomas Blanc-Hector](https://github.com/jsnomad)
