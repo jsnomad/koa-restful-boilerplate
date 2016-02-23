@@ -19,7 +19,7 @@ router.post('/', async(ctx, next) =>
     ctx.body = await new City(ctx.request.body).save())
 // Get /api/id
 router.get('/:id', async(ctx, next) =>
-    ctx.body = await City(ctx.params.id))
+    ctx.body = await City.findById(ctx.params.id))
 // PUT /api/id
 router.put('/:id', async(ctx, next) =>
     ctx.body = await City.findByIdAndUpdate(ctx.params.id, ctx.request.body))
