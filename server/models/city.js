@@ -6,7 +6,7 @@ const citySchema = new Schema({
   name: { type: String, required: true },
   totalPopulation: { type: Number, required: true },
   country: String,
-  zipCode: String,
+  zipCode: Number,
   updated: { type: Date, default: Date.now },
 })
 
