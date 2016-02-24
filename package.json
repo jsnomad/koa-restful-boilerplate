@@ -26,9 +26,9 @@
     "start": "nodemon server/ --exec babel-node",
     "build": "babel server -d dist",
     "lint": "eslint ./server",
-    "test": "npm run lint",
+    "test": "npm run lint && npm run mocha",
     "prod": "npm run build && node dist/",
-    "mochatest": "./node_modules/.bin/mocha --compilers js:babel-register --require babel-polyfill"
+    "mocha": "./node_modules/.bin/mocha --compilers js:babel-register --require babel-polyfill"
   },
   "devDependencies": {
     "babel-cli": "^6.5.1",
