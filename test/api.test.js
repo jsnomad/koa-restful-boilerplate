@@ -38,7 +38,7 @@ describe('GET /city', () => {
 describe('GET /city/:id', () => {
   it('should get a city', (done) => {
     request
-      .get('/api/city/' + temp.idCity)
+      .get(`/api/city/${temp.idCity}`)
       .expect(200, (err, res) => {
         res.body.name.should.equal('Bangkok')
         res.body.totalPopulation.should.equal(8249117)
@@ -53,7 +53,7 @@ describe('GET /city/:id', () => {
 describe('PUT /city', () => {
   it('should update a city', (done) => {
     request
-      .put('/api/city/' + temp.idCity)
+      .put(`/api/city/${temp.idCity}`)
       .set('Accept', 'application/json')
       .send({
         name: 'Chiang Mai',
@@ -69,7 +69,7 @@ describe('PUT /city', () => {
 
   it('should get updated city', (done) => {
     request
-      .get('/api/city/' + temp.idCity)
+      .get(`/api/city/${temp.idCity}`)
       .expect(200, (err, res) => {
         res.body.name.should.equal('Chiang Mai')
         res.body.totalPopulation.should.equal(148477)
@@ -84,7 +84,7 @@ describe('PUT /city', () => {
 describe('DELETE /city', () => {
   it('should delete a city', (done) => {
     request
-      .delete('/api/city/' + temp.idCity)
+      .delete(`/api/city/${temp.idCity}`)
       .set('Accept', 'application/json')
       .expect(200, (err, res) => {
         done()
