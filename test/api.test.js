@@ -90,4 +90,12 @@ describe('DELETE /city', () => {
         done()
       })
   })
+
+  it('should get error', (done) => {
+    request
+      .get(`/api/city/${temp.idCity}`)
+      .expect(404, () => {
+        done()
+      })
+  })
 })
