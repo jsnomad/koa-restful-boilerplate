@@ -1,6 +1,4 @@
-[![Circle CI](https://circleci.com/gh/jsnomad/koa-restful-boilerplate.svg?style=svg)](https://circleci.com/gh/jsnomad/koa-restful-boilerplate)
-
-# Koa 2 Restful Boilerplate
+# Koa 2 Restful Boilerplate [![Circle CI](https://circleci.com/gh/jsnomad/koa-restful-boilerplate.svg?style=svg)](https://circleci.com/gh/jsnomad/koa-restful-boilerplate)
 
 ## Description
 Koa 2 RESTful API using :
