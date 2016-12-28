@@ -1,6 +1,6 @@
-import city from './city'
+import cities from './cities'
 
-const routes = [city]
+const routes = [cities]
 
 export default function (app) {
   routes.forEach((route) => {

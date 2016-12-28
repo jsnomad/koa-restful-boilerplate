@@ -9,7 +9,7 @@ should()
 describe('POST /city', () => {
   it('should add a city', (done) => {
     request
-      .post('/api/city')
+      .post('/api/cities')
       .set('Accept', 'application/json')
       .send({
         name: 'Bangkok',
@@ -24,10 +24,10 @@ describe('POST /city', () => {
   })
 })
 
-describe('GET /city', () => {
+describe('GET /cities', () => {
   it('should get all cities', (done) => {
     request
-      .get('/api/city')
+      .get('/api/cities')
       .expect(200, (err, res) => {
         expect(res.body.length).to.be.at.least(1);
         done()
@@ -35,10 +35,10 @@ describe('GET /city', () => {
   })
 })
 
-describe('GET /city/:id', () => {
+describe('GET /cities/:id', () => {
   it('should get a city', (done) => {
     request
-      .get(`/api/city/${temp.idCity}`)
+      .get(`/api/cities/${temp.idCity}`)
       .expect(200, (err, res) => {
         res.body.name.should.equal('Bangkok')
         res.body.totalPopulation.should.equal(8249117)
@@ -50,10 +50,10 @@ describe('GET /city/:id', () => {
   })
 })
 
-describe('PUT /city', () => {
+describe('PUT /cities', () => {
   it('should update a city', (done) => {
     request
-      .put(`/api/city/${temp.idCity}`)
+      .put(`/api/cities/${temp.idCity}`)
       .set('Accept', 'application/json')
       .send({
         name: 'Chiang Mai',
@@ -69,7 +69,7 @@ describe('PUT /city', () => {
 
   it('should get updated city', (done) => {
     request
-      .get(`/api/city/${temp.idCity}`)
+      .get(`/api/cities/${temp.idCity}`)
       .expect(200, (err, res) => {
         res.body.name.should.equal('Chiang Mai')
         res.body.totalPopulation.should.equal(148477)
@@ -81,10 +81,10 @@ describe('PUT /city', () => {
   })
 })
 
-describe('DELETE /city', () => {
+describe('DELETE /cities', () => {
   it('should delete a city', (done) => {
     request
-      .delete(`/api/city/${temp.idCity}`)
+      .delete(`/api/cities/${temp.idCity}`)
       .set('Accept', 'application/json')
       .expect(200, (err, res) => {
         done()
@@ -93,7 +93,7 @@ describe('DELETE /city', () => {
 
   it('should get error', (done) => {
     request
-      .get(`/api/city/${temp.idCity}`)
+      .get(`/api/cities/${temp.idCity}`)
       .expect(404, () => {
         done()
       })
