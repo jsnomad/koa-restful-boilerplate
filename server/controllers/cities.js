@@ -1,13 +1,5 @@
 import 'babel-polyfill'
-import Router from 'koa-router'
 import City from '../models/cities'
-import { baseApi } from '../config'
-
-const api = 'city'
-
-const router = new Router();
-
-router.prefix(`/${baseApi}/${api}`)
 
 class CitiesControllers {
 
@@ -90,8 +82,6 @@ class CitiesControllers {
       ctx.throw(500)
     }
   }
-
-  /* eslint-enable no-param-reassign */
 
 }
 
