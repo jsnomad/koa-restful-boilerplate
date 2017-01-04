@@ -1,6 +1,7 @@
 import 'babel-polyfill'
 import Router from 'koa-router'
 import { baseApi } from '../config'
+import jwt from '../middlewares/jwt'
 import CitiesControllers from '../controllers/cities'
 
 const api = 'cities'
@@ -10,18 +11,22 @@ const router = new Router();
 router.prefix(`/${baseApi}/${api}`)
 
 // GET /api/cities
-router.get('/', CitiesControllers.find)
+router.get('/', jwt, CitiesControllers.find)
 
 // POST /api/cities
-router.post('/', CitiesControllers.add)
+// This route is protected, call POST /api/authenticate to get the token
+router.post('/', jwt, CitiesControllers.add)
 
 // GET /api/cities/id
-router.get('/:id', CitiesControllers.findById)
+// This route is protected, call POST /api/authenticate to get the token
+router.get('/:id', jwt, CitiesControllers.findById)
 
 // PUT /api/cities/id
-router.put('/:id', CitiesControllers.update)
+// This route is protected, call POST /api/authenticate to get the token
+router.put('/:id', jwt, CitiesControllers.update)
 
 // DELETE /api/cities/id
-router.delete('/:id', CitiesControllers.delete)
+// This route is protected, call POST /api/authenticate to get the token
+router.delete('/:id', jwt, CitiesControllers.delete)
 
 export default router
