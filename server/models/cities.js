@@ -2,6 +2,7 @@ import mongoose from 'mongoose'
 
 const Schema = mongoose.Schema
 
+// To fix https://github.com/Automattic/mongoose/issues/4291
 mongoose.Promise = global.Promise;
 
 const citySchema = new Schema({
