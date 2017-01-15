@@ -83,6 +83,8 @@ class CitiesControllers {
     }
   }
 
+  /* eslint-enable no-param-reassign */
+
 }
 
 export default new CitiesControllers()
