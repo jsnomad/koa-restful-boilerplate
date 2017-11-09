@@ -1,23 +1,9 @@
 version: 2
 jobs:
   build:
-    working_directory: ~/koa-restful-boilerplate
-    # The primary container is an instance of the first list image listed. Your build commands run in this container.
     docker:
-      - image: circleci/node:7.7.2
-    # The secondary container is an instance of the second listed image which is run in a common network where ports exposed on the primary container are available on localhost.
-      - image: mongo:3.4.4
+      - image: node:8.0
     steps:
-      - checkout
       - run:
-          name: Update npm
-          command: 'sudo npm install -g npm@latest'
-      - restore_cache:
-          key: dependency-cache-{{ checksum "package.json" }}
-      - save_cache:
-          key: dependency-cache-{{ checksum "package.json" }}
-          paths:
-            - node_modules
-      - run:
-          name: Test
+          name: "Test"
           command: npm test
