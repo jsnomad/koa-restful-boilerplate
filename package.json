@@ -3,15 +3,7 @@
   "description": "Koa 2 RESTful API boilerplate",
   "version": "1.0.0",
   "author": "Thomas Blanc-Hector",
-  "keywords": [
-    "koa",
-    "rest",
-    "api",
-    "mongodb",
-    "mongoose",
-    "async",
-    "es7"
-  ],
+  "keywords": ["koa", "rest", "api", "mongodb", "mongoose", "async", "es7"],
   "repository": {
     "type": "git",
     "url": "git+https://github.com/jsnomad/koa-restful-boilerplate.git"
@@ -28,35 +20,37 @@
     "lint": "eslint ./server",
     "test": "npm run lint && npm run mocha",
     "prod": "npm run build && node dist/",
-    "mocha": "./node_modules/.bin/mocha --compilers js:babel-register --require babel-polyfill"
+    "mocha":
+      "./node_modules/.bin/mocha --compilers js:babel-register --require babel-polyfill --exit"
   },
   "dependencies": {
     "babel-polyfill": "^6.5.0",
     "glob": "^7.1.1",
-    "jsonwebtoken": "^7.2.1",
+    "jsonwebtoken": "^8.1.0",
     "koa": "^2.0.0-alpha.7",
-    "koa-bodyparser": "^3.0.0",
-    "koa-helmet": "^2.0.0",
-    "koa-jwt": "^2.1.0",
-    "koa-logger": "^2.0.0",
+    "koa-bodyparser": "^4.2.0",
+    "koa-helmet": "^3.2.0",
+    "koa-jwt": "^3.2.2",
+    "koa-logger": "^3.1.0",
     "koa-router": "^7.0.0",
     "mongoose": "^4.4.3"
   },
   "devDependencies": {
     "babel-cli": "^6.5.1",
-    "babel-eslint": "^7.1.1",
+    "babel-eslint": "^8.0.2",
+    "babel-plugin-add-module-exports": "^0.2.1",
     "babel-plugin-syntax-async-functions": "^6.5.0",
     "babel-plugin-transform-async-to-generator": "^6.5.0",
-    "babel-plugin-add-module-exports": "^0.2.1",
     "babel-preset-es2015": "^6.3.13",
     "babel-register": "^6.3.13",
-    "chai": "^3.5.0",
-    "eslint": "^3.12.2",
-    "eslint-config-airbnb": "^13.0.0",
+    "chai": "^4.1.2",
+    "eslint": "^4.10.0",
+    "eslint-config-airbnb": "^16.1.0",
+    "eslint-config-prettier": "^2.7.0",
     "eslint-plugin-import": "^2.2.0",
-    "mocha": "^3.2.0",
+    "mocha": "^4.0.1",
     "nodemon": "^1.8.1",
-    "should": "^11.1.2",
-    "supertest": "^2.0.1"
+    "should": "^13.1.3",
+    "supertest": "^3.0.0"
   }
 }

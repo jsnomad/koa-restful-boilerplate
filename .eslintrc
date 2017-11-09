@@ -6,8 +6,9 @@
     "node": true
   },
   "parser": "babel-eslint",
-  "extends": "airbnb/base",
+  "extends": [ "airbnb/base", "prettier"],
   "rules": {
+    "comma-dangle": ["error", "never"],
     "semi": [0, "always"],
     "no-console": 0,
     "class-methods-use-this": 0,
