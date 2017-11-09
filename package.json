@@ -3,7 +3,15 @@
   "description": "Koa 2 RESTful API boilerplate",
   "version": "1.0.0",
   "author": "Thomas Blanc-Hector",
-  "keywords": ["koa", "rest", "api", "mongodb", "mongoose", "async", "es7"],
+  "keywords": [
+    "koa",
+    "rest",
+    "api",
+    "mongodb",
+    "mongoose",
+    "async",
+    "es7"
+  ],
   "repository": {
     "type": "git",
     "url": "git+https://github.com/jsnomad/koa-restful-boilerplate.git"
@@ -20,14 +28,13 @@
     "lint": "eslint ./server",
     "test": "npm run lint && npm run mocha",
     "prod": "npm run build && node dist/",
-    "mocha":
-      "./node_modules/.bin/mocha --compilers js:babel-register --require babel-polyfill --exit"
+    "mocha": "./node_modules/.bin/mocha --compilers js:babel-register --require babel-polyfill --exit"
   },
   "dependencies": {
     "babel-polyfill": "^6.5.0",
     "glob": "^7.1.1",
     "jsonwebtoken": "^8.1.0",
-    "koa": "^2.0.0-alpha.7",
+    "koa": "^2.4.1",
     "koa-bodyparser": "^4.2.0",
     "koa-helmet": "^3.2.0",
     "koa-jwt": "^3.2.2",

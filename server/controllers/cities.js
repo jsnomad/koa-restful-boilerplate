@@ -1,4 +1,3 @@
-import 'babel-polyfill';
 import City from '../models/cities';
 
 class CitiesControllers {
