@@ -1,5 +1,5 @@
-import jwt from 'koa-jwt'
+import jwt from 'koa-jwt';
 
 export default jwt({
-  secret: 'YourKey',
-})
+  secret: 'YourKey'
+});

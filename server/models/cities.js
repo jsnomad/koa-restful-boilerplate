@@ -1,6 +1,6 @@
-import mongoose from 'mongoose'
+import mongoose from 'mongoose';
 
-const Schema = mongoose.Schema
+const { Schema } = mongoose;
 
 // To fix https://github.com/Automattic/mongoose/issues/4291
 mongoose.Promise = global.Promise;
@@ -8,18 +8,18 @@ mongoose.Promise = global.Promise;
 const citySchema = new Schema({
   name: {
     type: String,
-    required: true,
+    required: true
   },
   totalPopulation: {
     type: Number,
-    required: true,
+    required: true
   },
   country: String,
   zipCode: Number,
   updated: {
     type: Date,
-    default: Date.now,
-  },
-})
+    default: Date.now
+  }
+});
 
-export default mongoose.model('City', citySchema)
+export default mongoose.model('City', citySchema);
