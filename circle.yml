@@ -1,3 +1,11 @@
-machine:
-  node:
-    version: 5.0.0
+version: 2
+jobs:
+  build:
+    docker:
+      - image: node:8.0
+    steps:
+      - run:
+          name: "Checking Versions"
+          command: |
+            node --version
+            npm --version
