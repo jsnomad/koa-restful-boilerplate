@@ -18,24 +18,6 @@ jobs:
           key: dependency-cache-{{ checksum "package.json" }}
           paths:
             - node_modules
-  test:
-    docker:
-      - image: circleci/node:8.6.0
-      - image: mongo:3.4.4
-    steps:
-      - checkout
       - run:
           name: Test
           command: npm test
-
-workflows:
-  version: 2
-  build_and_test:
-    jobs:
-      - build
-      - test:
-          requires:
-            - build
-          filters:
-            branches:
-              only: master
