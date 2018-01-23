@@ -32,18 +32,18 @@
   },
   "dependencies": {
     "babel-polyfill": "^6.5.0",
-    "glob": "^7.1.1",
-    "jsonwebtoken": "^8.1.0",
+    "glob": "^7.1.2",
+    "jsonwebtoken": "^8.1.1",
     "koa": "^2.4.1",
     "koa-bodyparser": "^4.2.0",
-    "koa-helmet": "^3.2.0",
-    "koa-jwt": "^3.2.2",
+    "koa-helmet": "^3.3.0",
+    "koa-jwt": "^3.3.0",
     "koa-logger": "^3.1.0",
-    "koa-router": "^7.0.0",
-    "mongoose": "^4.4.3"
+    "koa-router": "^7.3.0",
+    "mongoose": "^5.0.1"
   },
   "devDependencies": {
-    "babel-cli": "^6.5.1",
+    "babel-cli": "^6.26.0",
     "babel-eslint": "^8.0.2",
     "babel-plugin-add-module-exports": "^0.2.1",
     "babel-plugin-syntax-async-functions": "^6.5.0",
