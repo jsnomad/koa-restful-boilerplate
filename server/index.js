@@ -3,7 +3,7 @@ import Koa from 'koa';
 import logger from 'koa-logger';
 import mongoose from 'mongoose';
 import helmet from 'koa-helmet';
-import routing from './routes/';
+import routing from './routes';
 import { port, connexionString } from './config';
 
 mongoose.connect(connexionString);
